@@ -14,9 +14,9 @@ According to the characteristics of the financial industry, this manual explains
 
 # SEAAPS blockchain
 
-in 2011, Bitcoin was first introduced, and SEAAPS's entrepreneurial team studied Bitcoin's kernel technology “blockchain” as an emerging technology for changing the way of human society is organized in the future. in 2014, the SEAAPS Public Chain was launched to the market.
+in 2011, Bitcoin was first introduced, and SEAAPS's entrepreneurial team studied Bitcoin's kernel technology “blockchain” as an emerging technology for changing the way of human society is organized in the future. in 2014, the SEAAPS chain was launched to the market.
 
-SEAAPS Public Chain had operated successfully for 5 years already, 12 million blocks height (as of May 2019), 5000 TPS in commercial public chain could be met. The vision of SEAAPS Public Chain is to provide a safe, valid, credible commercial blockchain environment. at the same time, The SEAAPS Public Chain is also positioned as a decentralized trading platform that accommodates a variety of digital assets.
+SEAAPS chain had operated successfully for 5 years already, 12 million blocks height (as of May 2019), 5000 TPS in commercial public chain could be met. The vision of SEAAPS chain is to provide a safe, valid, credible commercial blockchain environment. at the same time, The SEAAPS chain is also positioned as a decentralized trading platform that accommodates a variety of digital assets.
 
 ![local image](../Images/01_blockchain_layer.png)
 
@@ -57,7 +57,7 @@ The blockchain in the financial industry is not a public chain and must meet fin
 
 The SEAAPS blockchain is a virtual network connected by nodes of multiple participants. Each participant in the network can have one or more nodes. They exist in the form of network services, and each node maintains all Or part of the ledger data, there are multiple copies of the ledger data in the entire blockchain network, so single or part of the nodes will be disabled, no data will be lost, and the service will not be stopped.
 
-The consensus protocol of SEAAPS Public Chain adopts randomized BFT. The core part of SEAAPS Public Chain contains several validating nodes that maintain the underlying validating network for the system. This network opens for every application on SEAAPS Public Chain access. DAPPs on SEAAPS Public Chain refer to the applications based on SEAAPS Public Chain for specific users. These applications can directly access to the public SEAAPS Public Chain through the API provided by the SEAAPS Public Chain. These applications can help to validate.
+The consensus protocol of SEAAPS chain adopts randomized BFT. The core part of SEAAPS chain contains several validating nodes that maintain the underlying validating network for the system. This network opens for every application on SEAAPS chain access. DAPPs on SEAAPS chain refer to the applications based on SEAAPS chain for specific users. These applications can directly access to the public SEAAPS chain through the API provided by the SEAAPS chain. These applications can help to validate.
 
 Two functions may be implemented:
 
@@ -69,7 +69,7 @@ The PBFT algorithm has a one-third fault tolerance rate, and the number of verif
 
 ## Consensus algorithm
 
-The SEAAPS Public Chain technology uses a self-owned proprietary BFT consensus algorithm.
+The SEAAPS chain technology uses a self-owned proprietary BFT consensus algorithm.
 
 under PBFT mechanism, there is a concept called view. in a view, there will be primary node (replica), and the rest of the nodes are called backups. The primary node is responsible for ordering the requests from the client and then sending them to the backup nodes in order. This primary node of PBFT has more rights than other nodes, and if it has a problem, it will cause a relatively large delay in the system. in rBFT, this point has been improved. referring to the mechanism of election in raFT, voting is adopted, and there is no need to snatch the accounting right to ensure the fairness of the rights of each node.
 

@@ -1,8 +1,8 @@
 # SEAAPS blockchain !heading
 
-in 2011, Bitcoin was first introduced, and SEAAPS's entrepreneurial team studied Bitcoin's kernel technology “blockchain” as an emerging technology for changing the way of human society is organized in the future. in 2014, the SEAAPS Public Chain was launched to the market.
+in 2011, Bitcoin was first introduced, and SEAAPS's entrepreneurial team studied Bitcoin's kernel technology “blockchain” as an emerging technology for changing the way of human society is organized in the future. in 2014, the SEAAPS chain was launched to the market.
 
-SEAAPS Public Chain had operated successfully for 5 years already, 12 million blocks height (as of May 2019), 5000 TPS in commercial public chain could be met. The vision of SEAAPS Public Chain is to provide a safe, valid, credible commercial blockchain environment. at the same time, The SEAAPS Public Chain is also positioned as a decentralized trading platform that accommodates a variety of digital assets.
+The vision of SEAAPS chain is to provide a safe, valid, credible commercial blockchain environment. at the same time, The SEAAPS chain is also positioned as a decentralized trading platform that accommodates a variety of digital assets.
 
 ![local image](../Images/01_blockchain_layer.png)
 
