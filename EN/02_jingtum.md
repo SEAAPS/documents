@@ -14,7 +14,7 @@ Comparison of Major Blockchain Technology Functions
 
 Topic|BTC|ETH|Hyperledger|Ripple/Stellar|SEAAPS
 :--:|:--:|:--:|:--:|:--:|:--:
-consensus mechanism|PoW|PoW|DIP type|Consensus|RPBFT
+consensus mechanism|PoW|PoW|DIP type|Consensus|RBFT
 Multi-assets|N|Contract|Contract|Native|Native
 Asset exchange|N|Contract|Contract|Native|Native
 Smart contract|N|Y|Y|N|Y
