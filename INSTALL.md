@@ -44,6 +44,7 @@ pandoc -s README.cn.md -o README.cn.docx
 
 cd ../EN
 pandoc -s README.en.md -o README.en.docx
+cd ..
 ```
 
 此时已经有docx文件，可以用WPS处理后导出成pdf。

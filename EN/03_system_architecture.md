@@ -26,7 +26,7 @@ Two functions may be implemented:
 
 1. it is involved in the consensus of public nodes in the network on the SEAAPS
 Chain.
-2. if an application only uses aPi to access to the blockchain, there is no need to deploy a single authentication node.
+2. if an application only uses API to access to the blockchain, there is no need to deploy a single authentication node.
 
 The RBFT algorithm has a one-third fault tolerance rate, and the number of verified nodes is recommended to be no less than 6 nodes.
 
@@ -34,7 +34,7 @@ The RBFT algorithm has a one-third fault tolerance rate, and the number of verif
 
 The SEAAPS chain technology uses a self-owned proprietary BFT consensus algorithm.
 
-Under RBFT mechanism, there is a concept called view. in a view, there will be primary node (replica), and the rest of the nodes are called backups. The primary node is responsible for ordering the requests from the client and then sending them to the backup nodes in order. This primary node of RBFT has more rights than other nodes, and if it has a problem, it will cause a relatively large delay in the system. in rBFT, this point has been improved. referring to the mechanism of election in raFT, voting is adopted, and there is no need to snatch the accounting right to ensure the fairness of the rights of each node.
+Under RBFT mechanism, there is a concept called view. in a view, there will be primary node (replica), and the rest of the nodes are called backups. The primary node is responsible for ordering the requests from the client and then sending them to the backup nodes in order. This primary node of RBFT has more rights than other nodes, and if it has a problem, it will cause a relatively large delay in the system. in RBFT, this point has been improved. referring to the mechanism of election in RBFT, voting is adopted, and there is no need to snatch the accounting right to ensure the fairness of the rights of each node.
 
 ## Financial blockchain
 
