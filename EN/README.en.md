@@ -4,6 +4,7 @@
 * [SEAAPS blockchain](#seaaps-blockchain)
 * [System architecture](#system-architecture)
 * [Software architecture](#software-architecture)
+* [Security strategy](#security-strategy)
 
 
 # Preface
@@ -61,17 +62,17 @@ The consensus protocol of SEAAPS chain adopts randomized BFT. The core part of S
 
 Two functions may be implemented:
 
-1. it is involved in the consensus of public nodes in the network on the SEAAPS Public
+1. it is involved in the consensus of public nodes in the network on the SEAAPS
 Chain.
 2. if an application only uses aPi to access to the blockchain, there is no need to deploy a single authentication node.
 
-The PBFT algorithm has a one-third fault tolerance rate, and the number of verified nodes is recommended to be no less than 6 nodes.
+The RBFT algorithm has a one-third fault tolerance rate, and the number of verified nodes is recommended to be no less than 6 nodes.
 
 ## Consensus algorithm
 
 The SEAAPS chain technology uses a self-owned proprietary BFT consensus algorithm.
 
-under PBFT mechanism, there is a concept called view. in a view, there will be primary node (replica), and the rest of the nodes are called backups. The primary node is responsible for ordering the requests from the client and then sending them to the backup nodes in order. This primary node of PBFT has more rights than other nodes, and if it has a problem, it will cause a relatively large delay in the system. in rBFT, this point has been improved. referring to the mechanism of election in raFT, voting is adopted, and there is no need to snatch the accounting right to ensure the fairness of the rights of each node.
+Under RBFT mechanism, there is a concept called view. in a view, there will be primary node (replica), and the rest of the nodes are called backups. The primary node is responsible for ordering the requests from the client and then sending them to the backup nodes in order. This primary node of RBFT has more rights than other nodes, and if it has a problem, it will cause a relatively large delay in the system. in rBFT, this point has been improved. referring to the mechanism of election in raFT, voting is adopted, and there is no need to snatch the accounting right to ensure the fairness of the rights of each node.
 
 ## Financial blockchain
 
@@ -125,4 +126,37 @@ For users without a bank account, the sender can use double encryption to send m
 1. The sender transfers the token to the withdrawal point wallet closest to the recipient, and the note is double encrypted with the withdrawal point wallet address and the password specified by the sender;
 1. The sender informs the recipient of the password via other way such as SMS, phone;
 1. The recipient goes to the withdrawal point and tells the password. The withdrawal point uses the wallet private key that only he knows and password to decrypt it, and obtains the note information. After verifying the recipient's identity, the payment is made;
+
+# Security strategy
+
+As we all know, the development of blockchain technology is inseparable from cryptography, but this does not mean that we can use the blockchain at will without worrying about security issues.
+
+Around the blockchain-based banking business system, security policies are required from the underlying blockchain (smart contracts) and application systems, and they are strictly enforced.
+
+## Blockchain security
+
+![local image](../Images/03_software_architecture.png)
+
+The blockchain is essentially a system based on how to ensure that the data is trusted in an insecure and untrusted environment. Transactions are undeniable through transaction signatures. Ledgers are accessed through block connections, P2P network communication synchronization, and consensus algorithms. Ensure the consistency of the ledger data.
+
+The wallet on blockchain has two parts, the address and the secret. For the user, the secret must be ensured and it cannot be leaked to third parties.
+
+When transferring assets, you should use the wallet secret to sign the transaction locally or offline, and then send it to the blockchain node. Do not transmit the key on the network.
+
+For long-term custody assets, transfer them to a cold wallet. Once the cold wallet transfers assets, it becomes a hot wallet, and a new cold wallet can be established to save the remaining assets.
+
+For the transfer of major assets, you can vote by multi-signature wallet to prevent the risk of a single wallet.
+
+## Business system security
+
+![local image](../Images/02_system_architecture.png)
+
+Traditional security technologies are still effective for blockchain application systems, such as establishing a DMZ and deploying blockchain node services between two firewalls to prevent sniffing and intrusion from public networks.
+
+The application system will inevitably use the wallet secret for transaction signing, and should pay attention to the following:
+
+1. Do not save secret on any server
+1. If needs a transaction signature on server,  It can transmit the transaction details to a dedicated server for one-way signature, and then retrieve the signed content for broadcasting.
+1. The user's wallet secret should be stored on the client, and the user is responsible for backing it up, not on the server
+1. If the user secret must be stored on the server, it must be stored after encrypted secret, preferably user password, salt double encryption
 

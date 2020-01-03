@@ -47,3 +47,12 @@ pandoc -s README.en.md -o README.en.docx
 ```
 
 此时已经有docx文件，可以用WPS处理后导出成pdf。
+
+## 常见索引
+
+SWTC
+public chain
+RBFT
+local image
+
+前言 SWTC 致谢和作者
